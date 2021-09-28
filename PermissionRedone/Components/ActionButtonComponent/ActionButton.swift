@@ -7,7 +7,18 @@
 
 import UIKit
 
-class ActionButton: BaseView {
+class ActionButton: GenericBaseView<ActionButtonData> {
+    
+    private lazy var shadowContainer: UIView = {
+        let temp = UIView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.layer.shadowColor = UIColor.black.cgColor
+        temp.layer.shadowOffset = CGSize(width: 0, height: 2)
+        temp.layer.shadowRadius = 4
+        temp.layer.shadowOpacity = 0.6
+        temp.layer.cornerRadius = 6
+        return temp
+    }()
     
     private lazy var containerView: UIView = {
         let temp = UIView()
@@ -22,6 +33,9 @@ class ActionButton: BaseView {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.font = FontManager.bold(14).value
+        temp.text = " "
+        temp.contentMode = .center
+        temp.textAlignment = .center
         return temp
     }()
     
@@ -29,20 +43,88 @@ class ActionButton: BaseView {
         super.addMajorViewComponents()
         addContainerView()
     }
-    
+    override func setupViewConfigurations() {
+        super.setupViewConfigurations()
+        addTapGesture()
+    }
     private func addContainerView() {
-        addSubview(containerView)
+        addSubview(shadowContainer)
+        shadowContainer.addSubview(containerView)
+        containerView.addSubview(infoTitle)
         
         NSLayoutConstraint.activate([
-        
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            containerView.topAnchor.constraint(equalTo: topAnchor),
+            
+            shadowContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
+            shadowContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            shadowContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
+            shadowContainer.topAnchor.constraint(equalTo: topAnchor),
             
             
+            containerView.leadingAnchor.constraint(equalTo: shadowContainer.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: shadowContainer.trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: shadowContainer.bottomAnchor),
+            containerView.topAnchor.constraint(equalTo: shadowContainer.topAnchor),
+            
+            infoTitle.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            infoTitle.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             
         ])
     }
     
+    override func loadDataView() {
+        super.loadDataView()
+        guard let data = returnData() else { return }
+        
+        infoTitle.text = data.text
+        
+        switch data.buttonType {
+            case .filled(let theme):
+                containerView.backgroundColor = theme.value
+                infoTitle.textColor = .white
+            case .outlined(let theme):
+                containerView.layer.borderWidth = 1
+                containerView.layer.borderColor = theme.value.cgColor
+                containerView.backgroundColor = .white
+                infoTitle.textColor = theme.value
+        
+        }
+    
+    }
+    
+    
+    
+    
+    
+//    func loadData() {
+//        infoTitle.text = data.text
+//        switch data.buttonType {
+//            case .filled(let theme):
+//                containerView.backgroundColor = theme.value
+//                infoTitle.textColor = .white
+//            case .outlined(let theme):
+//                containerView.layer.borderWidth = 1
+//                containerView.layer.borderColor = theme.value.cgColor
+//                containerView.backgroundColor = .white
+//                infoTitle.textColor = theme.value
+//        }
+//
+//
+//    }
+    
+}
+
+extension ActionButton: UIGestureRecognizerDelegate {
+    func addTapGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: .buttonTappedSelector)
+        tap.delegate = self
+        addGestureRecognizer(tap)
+    }
+    
+    @objc fileprivate func buttonTapped(_ sender: UITapGestureRecognizer) {
+        print("Bana basıldı")
+    }
+}
+
+fileprivate extension Selector {
+    static let buttonTappedSelector = #selector(ActionButton.buttonTapped)
 }
