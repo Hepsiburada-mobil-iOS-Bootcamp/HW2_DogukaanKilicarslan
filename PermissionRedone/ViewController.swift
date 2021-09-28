@@ -7,7 +7,10 @@
 
 import UIKit
 
+typealias BooleanCompletionBlock = (Bool) -> Void
+
 class ViewController: UIViewController {
+    
 
     private var cameraButton: ActionButton! //This button will be initialized by me later. trust me.
     private var photosButton: ActionButton!
@@ -18,12 +21,30 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         addActionButton()
         
+        test(completion: testHandler)
         
+        
+        
+        
+        //MARK: - delegate methods
+
+//        cameraButton.delegate = self
+//        photosButton.delegate = self
         
     }
-
+    
+    lazy var testHandler: BooleanCompletionBlock = { value in
+        print("finish: \(value)")
+    }
+ 
+    lazy var actionButtonHandler: VoidCompletionBlock = {
+        print("cameraButtonPressed")
+    }
+    
     private func addActionButton() {
-        cameraButton = ActionButton()
+        
+        
+        cameraButton = ActionButton(frame: .zero, data: ActionButtonData(text: "Camera", type: .filled(.smooth)).setActionButtonListener(by: self.actionButtonHandler))
         cameraButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(cameraButton)
         
@@ -51,6 +72,21 @@ class ViewController: UIViewController {
         
         ])
     }
+    
+    func test(completion: @escaping (Bool) -> Void) {
+        print("test fired")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            completion(true)
+        }
+    }
 
 }
 
+
+//MARK: - delegate extension
+
+//extension ViewController: ActionButtonDelegate {
+//    func actionButtonPressed() {
+//        print("vc is informed")
+//    }
+//}

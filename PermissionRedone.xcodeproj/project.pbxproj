@@ -24,6 +24,7 @@
 		D8E7EF8B27031035008348B6 /* ActionButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF8A27031035008348B6 /* ActionButtonType.swift */; };
 		D8E7EF8D27031051008348B6 /* ActionButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF8C27031051008348B6 /* ActionButtonTheme.swift */; };
 		D8E7EF8F270317C4008348B6 /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF8E270317C4008348B6 /* GenericBaseView.swift */; };
+		D8E7EF9227034066008348B6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9127034066008348B6 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D8E7EF8A27031035008348B6 /* ActionButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonType.swift; sourceTree = "<group>"; };
 		D8E7EF8C27031051008348B6 /* ActionButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonTheme.swift; sourceTree = "<group>"; };
 		D8E7EF8E270317C4008348B6 /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
+		D8E7EF9127034066008348B6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				D8E7EF8027030435008348B6 /* BaseView.swift */,
+				D8E7EF8627030643008348B6 /* GenericValueProtocol.swift */,
 				D8E7EF8E270317C4008348B6 /* GenericBaseView.swift */,
 			);
 			path = BaseComponent;
@@ -181,6 +184,7 @@
 		D8E7EF8227030623008348B6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D8E7EF90270329EB008348B6 /* Extensions */,
 				D8E7EF8327030626008348B6 /* FontManager */,
 			);
 			path = Utils;
@@ -190,9 +194,16 @@
 			isa = PBXGroup;
 			children = (
 				D8E7EF8427030632008348B6 /* FontManager.swift */,
-				D8E7EF8627030643008348B6 /* GenericValueProtocol.swift */,
 			);
 			path = FontManager;
+			sourceTree = "<group>";
+		};
+		D8E7EF90270329EB008348B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EF9127034066008348B6 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 				D8E7EF492701F6F9008348B6 /* AppDelegate.swift in Sources */,
 				D8E7EF8D27031051008348B6 /* ActionButtonTheme.swift in Sources */,
 				D8E7EF8B27031035008348B6 /* ActionButtonType.swift in Sources */,
+				D8E7EF9227034066008348B6 /* UIView+Extensions.swift in Sources */,
 				D8E7EF8927030ADC008348B6 /* ActionButtonData.swift in Sources */,
 				D8E7EF8527030632008348B6 /* FontManager.swift in Sources */,
 				D8E7EF4B2701F6F9008348B6 /* SceneDelegate.swift in Sources */,

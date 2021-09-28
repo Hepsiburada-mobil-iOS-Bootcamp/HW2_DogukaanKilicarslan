@@ -7,7 +7,17 @@
 
 import UIKit
 
+//MARK: - delegate protocol
+
+//protocol ActionButtonDelegate: AnyObject{
+//    func actionButtonPressed()
+//}
+
 class ActionButton: GenericBaseView<ActionButtonData> {
+    
+    //MARK: - delegate var
+
+//    weak var delegate: ActionButtonDelegate?
     
     private lazy var shadowContainer: UIView = {
         let temp = UIView()
@@ -42,6 +52,7 @@ class ActionButton: GenericBaseView<ActionButtonData> {
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
         addContainerView()
+        
     }
     override func setupViewConfigurations() {
         super.setupViewConfigurations()
@@ -92,7 +103,10 @@ class ActionButton: GenericBaseView<ActionButtonData> {
     }
     
     
-    
+    func pressedButtonAction() {
+        guard let data = returnData() else { return }
+        data.actionButtonListener?()
+    }
     
     
 //    func loadData() {
@@ -122,6 +136,17 @@ extension ActionButton: UIGestureRecognizerDelegate {
     
     @objc fileprivate func buttonTapped(_ sender: UITapGestureRecognizer) {
         print("Bana basıldı")
+        isUserInteractionEnabled = false
+        startTappedAnimation { finish in
+            if finish {
+                print("CLICKED")
+                self.isUserInteractionEnabled = true
+                self.pressedButtonAction()
+                //MARK: - delegate method called
+
+//                self.delegate?.actionButtonPressed()
+            }
+        }
     }
 }
 
