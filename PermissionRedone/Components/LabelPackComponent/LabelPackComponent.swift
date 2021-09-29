@@ -14,7 +14,7 @@ class LabelPackComponent: GenericBaseView<LabelPackComponentData> {
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.alignment = .center
         temp.distribution = .fill
-        temp.axis = .horizontal
+        temp.axis = .vertical
         temp.spacing = 10
         return temp
     }()
@@ -46,6 +46,7 @@ class LabelPackComponent: GenericBaseView<LabelPackComponentData> {
     
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
+        addUserComponents()
     }
     
     func addUserComponents() {

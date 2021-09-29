@@ -14,36 +14,33 @@ class ViewController: UIViewController {
 
     private var cameraButton: ActionButton! //This button will be initialized by me later. trust me.
     private var photosButton: ActionButton!
-    private var actionModule: ActionModule!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        addActionButton()
-        addActionModule()
-        setupActionModuleData()
-//        test(completion: testHandler)
         
+        addActionButton()
         
         //MARK: - delegate methods
-
 //        cameraButton.delegate = self
 //        photosButton.delegate = self
         
+        
+        
     }
     
-    lazy var testHandler: BooleanCompletionBlock = { value in
-        print("finish: \(value)")
-    }
- 
-    lazy var actionButtonHandler: VoidCompletionBlock = {
+    lazy var cameraButtonHandler: VoidCompletionBlock = {
         print("cameraButtonPressed")
+        let permissionViewController = PermissionViewController()
+        self.present(permissionViewController, animated: true) {
+            print("PermissionViewController presented")
+        }
+    }
+    lazy var photosButtonHandler: VoidCompletionBlock = {
+        print("photosButtonPressed")
     }
     
     private func addActionButton() {
-        
-        
-        cameraButton = ActionButton(frame: .zero, data: ActionButtonData(text: "Camera", type: .filled(.smooth)).setActionButtonListener(by: self.actionButtonHandler))
+        cameraButton = ActionButton(frame: .zero, data: ActionButtonData(text: "Camera", type: .filled(.smooth)).setActionButtonListener(by: self.cameraButtonHandler))
         cameraButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(cameraButton)
         
@@ -58,7 +55,7 @@ class ViewController: UIViewController {
             
         ])
         
-        photosButton = ActionButton(frame: .zero, data: ActionButtonData(text: "Photos", type: .filled(.bright)))
+        photosButton = ActionButton(frame: .zero, data: ActionButtonData(text: "Photos", type: .filled(.bright)).setActionButtonListener(by: photosButtonHandler))
         photosButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(photosButton)
         
@@ -72,37 +69,6 @@ class ViewController: UIViewController {
         ])
     }
     
-    private func addActionModule() {
-        
-        actionModule = ActionModule()
-        actionModule.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(actionModule)
-        
-        NSLayoutConstraint.activate([
-            
-            actionModule.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            actionModule.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
-        ])
-    }
-    
-    private func setupActionModuleData() {
-        let negative = ActionButtonData(text: "Not Now", type: .outlined(.bright)).setActionButtonListener {
-            print("negative fired")
-        }
-        let positive = ActionButtonData(text: "OK", type: .filled(.smooth)).setActionButtonListener {
-            print("positive fired")
-        }
-        
-        actionModule.setData(by: ActionModuleData(negativeButtonData: negative, positiveButtonData: positive))
-    }
-    
-    
-    func test(completion: @escaping (Bool) -> Void) {
-        print("test fired")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            completion(true)
-        }
-    }
 
 }
 

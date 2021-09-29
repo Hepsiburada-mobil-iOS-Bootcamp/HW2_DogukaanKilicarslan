@@ -29,8 +29,10 @@
 		D8E7EF9727034F80008348B6 /* ActionModuleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9627034F80008348B6 /* ActionModuleData.swift */; };
 		D8E7EF9A27045FC8008348B6 /* LabelPackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9927045FC8008348B6 /* LabelPackComponent.swift */; };
 		D8E7EF9C27045FDF008348B6 /* LabelPackComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9B27045FDF008348B6 /* LabelPackComponentData.swift */; };
-		D8E7EF9F27046304008348B6 /* PermissionMainComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9E27046304008348B6 /* PermissionMainComponent.swift */; };
-		D8E7EFA127046335008348B6 /* PermissionMainComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFA027046335008348B6 /* PermissionMainComponentData.swift */; };
+		D8E7EF9F27046304008348B6 /* PermissionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9E27046304008348B6 /* PermissionMainView.swift */; };
+		D8E7EFA127046335008348B6 /* PermissionMainViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFA027046335008348B6 /* PermissionMainViewData.swift */; };
+		D8E7EFA627046D70008348B6 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFA527046D70008348B6 /* PermissionViewController.swift */; };
+		D8E7EFAA27046EA6008348B6 /* PermissionImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFA927046EA6008348B6 /* PermissionImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +81,10 @@
 		D8E7EF9627034F80008348B6 /* ActionModuleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModuleData.swift; sourceTree = "<group>"; };
 		D8E7EF9927045FC8008348B6 /* LabelPackComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPackComponent.swift; sourceTree = "<group>"; };
 		D8E7EF9B27045FDF008348B6 /* LabelPackComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPackComponentData.swift; sourceTree = "<group>"; };
-		D8E7EF9E27046304008348B6 /* PermissionMainComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainComponent.swift; sourceTree = "<group>"; };
-		D8E7EFA027046335008348B6 /* PermissionMainComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainComponentData.swift; sourceTree = "<group>"; };
+		D8E7EF9E27046304008348B6 /* PermissionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainView.swift; sourceTree = "<group>"; };
+		D8E7EFA027046335008348B6 /* PermissionMainViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainViewData.swift; sourceTree = "<group>"; };
+		D8E7EFA527046D70008348B6 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
+		D8E7EFA927046EA6008348B6 /* PermissionImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +135,12 @@
 		D8E7EF472701F6F9008348B6 /* PermissionRedone */ = {
 			isa = PBXGroup;
 			children = (
+				D8E7EFA227046D21008348B6 /* Scenes */,
+				D8E7EF7B27030044008348B6 /* Components */,
 				D8E7EF8227030623008348B6 /* Utils */,
 				D8E7EF7F2703042C008348B6 /* BaseComponent */,
-				D8E7EF7B27030044008348B6 /* Components */,
 				D8E7EF482701F6F9008348B6 /* AppDelegate.swift */,
 				D8E7EF4A2701F6F9008348B6 /* SceneDelegate.swift */,
-				D8E7EF4C2701F6F9008348B6 /* ViewController.swift */,
 				D8E7EF4E2701F6F9008348B6 /* Main.storyboard */,
 				D8E7EF542701F6FB008348B6 /* Assets.xcassets */,
 				D8E7EF562701F6FB008348B6 /* LaunchScreen.storyboard */,
@@ -199,6 +203,7 @@
 		D8E7EF8227030623008348B6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D8E7EFA727046E87008348B6 /* AssetHelpers */,
 				D8E7EF90270329EB008348B6 /* Extensions */,
 				D8E7EF8327030626008348B6 /* FontManager */,
 			);
@@ -242,10 +247,51 @@
 		D8E7EF9D270462F5008348B6 /* PermissionMainComponent */ = {
 			isa = PBXGroup;
 			children = (
-				D8E7EF9E27046304008348B6 /* PermissionMainComponent.swift */,
-				D8E7EFA027046335008348B6 /* PermissionMainComponentData.swift */,
+				D8E7EF9E27046304008348B6 /* PermissionMainView.swift */,
+				D8E7EFA027046335008348B6 /* PermissionMainViewData.swift */,
 			);
 			path = PermissionMainComponent;
+			sourceTree = "<group>";
+		};
+		D8E7EFA227046D21008348B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFA427046D34008348B6 /* Permission */,
+				D8E7EFA327046D2A008348B6 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D8E7EFA327046D2A008348B6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EF4C2701F6F9008348B6 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D8E7EFA427046D34008348B6 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFA527046D70008348B6 /* PermissionViewController.swift */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		D8E7EFA727046E87008348B6 /* AssetHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFA827046E8D008348B6 /* PermissionImages */,
+			);
+			path = AssetHelpers;
+			sourceTree = "<group>";
+		};
+		D8E7EFA827046E8D008348B6 /* PermissionImages */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFA927046EA6008348B6 /* PermissionImages.swift */,
+			);
+			path = PermissionImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,21 +424,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8E7EFA127046335008348B6 /* PermissionMainComponentData.swift in Sources */,
+				D8E7EFA127046335008348B6 /* PermissionMainViewData.swift in Sources */,
 				D8E7EF4D2701F6F9008348B6 /* ViewController.swift in Sources */,
 				D8E7EF8727030643008348B6 /* GenericValueProtocol.swift in Sources */,
 				D8E7EF9C27045FDF008348B6 /* LabelPackComponentData.swift in Sources */,
+				D8E7EFAA27046EA6008348B6 /* PermissionImages.swift in Sources */,
 				D8E7EF492701F6F9008348B6 /* AppDelegate.swift in Sources */,
 				D8E7EF9727034F80008348B6 /* ActionModuleData.swift in Sources */,
 				D8E7EF8D27031051008348B6 /* ActionButtonTheme.swift in Sources */,
 				D8E7EF9A27045FC8008348B6 /* LabelPackComponent.swift in Sources */,
 				D8E7EF8B27031035008348B6 /* ActionButtonType.swift in Sources */,
+				D8E7EFA627046D70008348B6 /* PermissionViewController.swift in Sources */,
 				D8E7EF9227034066008348B6 /* UIView+Extensions.swift in Sources */,
 				D8E7EF8927030ADC008348B6 /* ActionButtonData.swift in Sources */,
 				D8E7EF8527030632008348B6 /* FontManager.swift in Sources */,
 				D8E7EF4B2701F6F9008348B6 /* SceneDelegate.swift in Sources */,
 				D8E7EF9527034F77008348B6 /* ActionModule.swift in Sources */,
-				D8E7EF9F27046304008348B6 /* PermissionMainComponent.swift in Sources */,
+				D8E7EF9F27046304008348B6 /* PermissionMainView.swift in Sources */,
 				D8E7EF8127030435008348B6 /* BaseView.swift in Sources */,
 				D8E7EF532701F6F9008348B6 /* PermissionRedone.xcdatamodeld in Sources */,
 				D8E7EF7E27030066008348B6 /* ActionButton.swift in Sources */,

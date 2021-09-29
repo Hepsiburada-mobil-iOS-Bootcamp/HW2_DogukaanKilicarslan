@@ -30,14 +30,14 @@ class ActionModule: GenericBaseView<ActionModuleData> {
         let temp = ActionButton()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        temp.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        temp.widthAnchor.constraint(equalToConstant: 140).isActive = true
         return temp
     }()
     private lazy var positiveButton: ActionButton = {
         let temp = ActionButton()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        temp.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        temp.widthAnchor.constraint(equalToConstant: 140).isActive = true
         return temp
     }()
     
@@ -58,15 +58,12 @@ class ActionModule: GenericBaseView<ActionModuleData> {
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             
-            mainStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
-            mainStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10),
-            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
-            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
-            
-            
+            mainStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 40),
+            mainStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -60),
+            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             
         ])
-        
         
     }
     
