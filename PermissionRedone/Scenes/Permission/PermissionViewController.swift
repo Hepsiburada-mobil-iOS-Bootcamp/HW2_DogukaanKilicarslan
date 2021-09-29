@@ -10,7 +10,12 @@ import UIKit
 class PermissionViewController: UIViewController {
 
     private var permissionMainView: PermissionMainView!
+    private var viewModel: PermissionViewModel!
     
+    convenience init(viewModel: PermissionViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +23,7 @@ class PermissionViewController: UIViewController {
     }
     
     private func addPermissionMainView() {
-        permissionMainView = PermissionMainView(data: getPermissionViewData())
+        permissionMainView = PermissionMainView(data: viewModel.getPermissionMainViewData())
         permissionMainView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(permissionMainView)
@@ -33,15 +38,4 @@ class PermissionViewController: UIViewController {
         ])
     }
     
-    private func getPermissionViewData() -> PermissionMainViewData {
-        return PermissionMainViewData(image: PermissionImages.camera.value,
-                                      labelPackData: LabelPackComponentData(
-                                        title: "Camera Permission",
-                                        subtitle: "Would you please give permission to access to your camera"),
-                                      actionModuleData: ActionModuleData(
-                                        negativeButtonData: ActionButtonData(text: "NotNow",
-                                                                             type: .outlined(.smooth)),
-                                        positiveButtonData: ActionButtonData(text: "OK",
-                                                                             type: .filled(.smooth))))
-    }
 }
