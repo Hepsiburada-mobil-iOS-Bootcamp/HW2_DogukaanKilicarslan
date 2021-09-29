@@ -25,19 +25,20 @@ class ViewController: UIViewController {
 //        photosButton.delegate = self
         
         
-        
     }
     
     lazy var cameraButtonHandler: VoidCompletionBlock = {
         print("cameraButtonPressed")
-        let permissionViewController = PermissionViewController()
-        self.present(permissionViewController, animated: true) {
-            print("PermissionViewController presented")
-        }
+        self.present(PermissionViewBuilder.build(with: .camera), animated: true, completion: nil)
     }
     lazy var photosButtonHandler: VoidCompletionBlock = {
         print("photosButtonPressed")
+        self.present(PermissionViewBuilder.build(with: .photos), animated: true, completion: nil)
     }
+    
+    
+    
+    
     
     private func addActionButton() {
         cameraButton = ActionButton(frame: .zero, data: ActionButtonData(text: "Camera", type: .filled(.smooth)).setActionButtonListener(by: self.cameraButtonHandler))
@@ -49,9 +50,8 @@ class ViewController: UIViewController {
             cameraButton.heightAnchor.constraint(equalToConstant: 40),
             cameraButton.widthAnchor.constraint(equalToConstant: 140),
             
-            
             cameraButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cameraButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 450)
+            cameraButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 150)
             
         ])
         

@@ -15,27 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="5Hm-rt-FqN">
-                                <rect key="frame" x="180" y="144" width="54" height="111"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKm-t5-crG">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="30"/>
-                                        <state key="normal" title="Camera"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYh-gS-AbQ">
-                                        <rect key="frame" x="0.0" y="81" width="54" height="30"/>
-                                        <state key="normal" title="Photos"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="5Hm-rt-FqN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="0tv-DT-q9d"/>
-                            <constraint firstItem="5Hm-rt-FqN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="toz-8f-1PR"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

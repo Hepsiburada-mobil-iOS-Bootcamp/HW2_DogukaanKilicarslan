@@ -33,6 +33,14 @@
 		D8E7EFA127046335008348B6 /* PermissionMainViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFA027046335008348B6 /* PermissionMainViewData.swift */; };
 		D8E7EFA627046D70008348B6 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFA527046D70008348B6 /* PermissionViewController.swift */; };
 		D8E7EFAA27046EA6008348B6 /* PermissionImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFA927046EA6008348B6 /* PermissionImages.swift */; };
+		D8E7EFAE27048D94008348B6 /* PermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFAD27048D94008348B6 /* PermissionViewModel.swift */; };
+		D8E7EFB127048EB3008348B6 /* PermissionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFB027048EB3008348B6 /* PermissionManagerProtocol.swift */; };
+		D8E7EFB3270490B7008348B6 /* PermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFB2270490B7008348B6 /* PermissionViewBuilder.swift */; };
+		D8E7EFB62704914C008348B6 /* CameraPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFB52704914C008348B6 /* CameraPermissionManager.swift */; };
+		D8E7EFB92704934C008348B6 /* PhotosPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFB82704934C008348B6 /* PhotosPermissionManager.swift */; };
+		D8E7EFBC270494BE008348B6 /* PermissionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFBB270494BE008348B6 /* PermissionViewFactory.swift */; };
+		D8E7EFBF27049AEF008348B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8E7EFC127049AEF008348B6 /* Localizable.strings */; };
+		D8E7EFC427049BBC008348B6 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFC327049BBC008348B6 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +93,15 @@
 		D8E7EFA027046335008348B6 /* PermissionMainViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainViewData.swift; sourceTree = "<group>"; };
 		D8E7EFA527046D70008348B6 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		D8E7EFA927046EA6008348B6 /* PermissionImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionImages.swift; sourceTree = "<group>"; };
+		D8E7EFAD27048D94008348B6 /* PermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewModel.swift; sourceTree = "<group>"; };
+		D8E7EFB027048EB3008348B6 /* PermissionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManagerProtocol.swift; sourceTree = "<group>"; };
+		D8E7EFB2270490B7008348B6 /* PermissionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewBuilder.swift; sourceTree = "<group>"; };
+		D8E7EFB52704914C008348B6 /* CameraPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionManager.swift; sourceTree = "<group>"; };
+		D8E7EFB82704934C008348B6 /* PhotosPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPermissionManager.swift; sourceTree = "<group>"; };
+		D8E7EFBB270494BE008348B6 /* PermissionViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewFactory.swift; sourceTree = "<group>"; };
+		D8E7EFC027049AEF008348B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D8E7EFC227049B0C008348B6 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D8E7EFC327049BBC008348B6 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +152,7 @@
 		D8E7EF472701F6F9008348B6 /* PermissionRedone */ = {
 			isa = PBXGroup;
 			children = (
+				D8E7EFAB27048D61008348B6 /* Managers */,
 				D8E7EFA227046D21008348B6 /* Scenes */,
 				D8E7EF7B27030044008348B6 /* Components */,
 				D8E7EF8227030623008348B6 /* Utils */,
@@ -146,6 +164,7 @@
 				D8E7EF562701F6FB008348B6 /* LaunchScreen.storyboard */,
 				D8E7EF592701F6FB008348B6 /* Info.plist */,
 				D8E7EF512701F6F9008348B6 /* PermissionRedone.xcdatamodeld */,
+				D8E7EFC127049AEF008348B6 /* Localizable.strings */,
 			);
 			path = PermissionRedone;
 			sourceTree = "<group>";
@@ -222,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				D8E7EF9127034066008348B6 /* UIView+Extensions.swift */,
+				D8E7EFC327049BBC008348B6 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				D8E7EFA527046D70008348B6 /* PermissionViewController.swift */,
+				D8E7EFB2270490B7008348B6 /* PermissionViewBuilder.swift */,
+				D8E7EFAD27048D94008348B6 /* PermissionViewModel.swift */,
 			);
 			path = Permission;
 			sourceTree = "<group>";
@@ -292,6 +314,49 @@
 				D8E7EFA927046EA6008348B6 /* PermissionImages.swift */,
 			);
 			path = PermissionImages;
+			sourceTree = "<group>";
+		};
+		D8E7EFAB27048D61008348B6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFAF27048EA9008348B6 /* PermissionProtocols */,
+				D8E7EFBA270494A9008348B6 /* PermissionViewFactory */,
+				D8E7EFB72704933B008348B6 /* PhotosPermissionManager */,
+				D8E7EFB42704913F008348B6 /* CameraPermissionManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D8E7EFAF27048EA9008348B6 /* PermissionProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFB027048EB3008348B6 /* PermissionManagerProtocol.swift */,
+			);
+			path = PermissionProtocols;
+			sourceTree = "<group>";
+		};
+		D8E7EFB42704913F008348B6 /* CameraPermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFB52704914C008348B6 /* CameraPermissionManager.swift */,
+			);
+			path = CameraPermissionManager;
+			sourceTree = "<group>";
+		};
+		D8E7EFB72704933B008348B6 /* PhotosPermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFB82704934C008348B6 /* PhotosPermissionManager.swift */,
+			);
+			path = PhotosPermissionManager;
+			sourceTree = "<group>";
+		};
+		D8E7EFBA270494A9008348B6 /* PermissionViewFactory */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFBB270494BE008348B6 /* PermissionViewFactory.swift */,
+			);
+			path = PermissionViewFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +444,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = D8E7EF3C2701F6F9008348B6;
 			productRefGroup = D8E7EF462701F6F9008348B6 /* Products */;
@@ -398,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E7EF582701F6FB008348B6 /* LaunchScreen.storyboard in Resources */,
+				D8E7EFBF27049AEF008348B6 /* Localizable.strings in Resources */,
 				D8E7EF552701F6FB008348B6 /* Assets.xcassets in Resources */,
 				D8E7EF502701F6F9008348B6 /* Main.storyboard in Resources */,
 			);
@@ -428,23 +495,30 @@
 				D8E7EF4D2701F6F9008348B6 /* ViewController.swift in Sources */,
 				D8E7EF8727030643008348B6 /* GenericValueProtocol.swift in Sources */,
 				D8E7EF9C27045FDF008348B6 /* LabelPackComponentData.swift in Sources */,
+				D8E7EFB62704914C008348B6 /* CameraPermissionManager.swift in Sources */,
 				D8E7EFAA27046EA6008348B6 /* PermissionImages.swift in Sources */,
 				D8E7EF492701F6F9008348B6 /* AppDelegate.swift in Sources */,
 				D8E7EF9727034F80008348B6 /* ActionModuleData.swift in Sources */,
+				D8E7EFC427049BBC008348B6 /* String+Extensions.swift in Sources */,
 				D8E7EF8D27031051008348B6 /* ActionButtonTheme.swift in Sources */,
 				D8E7EF9A27045FC8008348B6 /* LabelPackComponent.swift in Sources */,
+				D8E7EFB3270490B7008348B6 /* PermissionViewBuilder.swift in Sources */,
 				D8E7EF8B27031035008348B6 /* ActionButtonType.swift in Sources */,
 				D8E7EFA627046D70008348B6 /* PermissionViewController.swift in Sources */,
 				D8E7EF9227034066008348B6 /* UIView+Extensions.swift in Sources */,
 				D8E7EF8927030ADC008348B6 /* ActionButtonData.swift in Sources */,
+				D8E7EFAE27048D94008348B6 /* PermissionViewModel.swift in Sources */,
 				D8E7EF8527030632008348B6 /* FontManager.swift in Sources */,
+				D8E7EFB127048EB3008348B6 /* PermissionManagerProtocol.swift in Sources */,
 				D8E7EF4B2701F6F9008348B6 /* SceneDelegate.swift in Sources */,
 				D8E7EF9527034F77008348B6 /* ActionModule.swift in Sources */,
 				D8E7EF9F27046304008348B6 /* PermissionMainView.swift in Sources */,
 				D8E7EF8127030435008348B6 /* BaseView.swift in Sources */,
+				D8E7EFBC270494BE008348B6 /* PermissionViewFactory.swift in Sources */,
 				D8E7EF532701F6F9008348B6 /* PermissionRedone.xcdatamodeld in Sources */,
 				D8E7EF7E27030066008348B6 /* ActionButton.swift in Sources */,
 				D8E7EF8F270317C4008348B6 /* GenericBaseView.swift in Sources */,
+				D8E7EFB92704934C008348B6 /* PhotosPermissionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +570,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D8E7EFC127049AEF008348B6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E7EFC027049AEF008348B6 /* en */,
+				D8E7EFC227049B0C008348B6 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -503,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -564,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
