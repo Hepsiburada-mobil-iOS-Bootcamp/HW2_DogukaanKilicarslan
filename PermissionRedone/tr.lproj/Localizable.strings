@@ -10,7 +10,7 @@
 "cameraPermissionSubTitle" = "Lütfen kameranıza erişim için uygulamaya izin veriniz.";
 
 "photosPermissionTitle" = "Galeri İzni";
-"photosPermissionSubTitle" = "Lütfen fotoğraf galerinize erişim için uygulamaya izin veriniz.";
+"photosPermissionSubtitle" = "Lütfen fotoğraf galerinize erişim için uygulamaya izin veriniz.";
 
-"permissionOk" = "Tamam";
+"permissionOK" = "Tamam";
 "permissionNotNow" = "Şimdi Değil";

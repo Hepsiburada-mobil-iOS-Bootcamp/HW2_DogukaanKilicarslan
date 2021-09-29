@@ -135,11 +135,11 @@ extension ActionButton: UIGestureRecognizerDelegate {
     }
     
     @objc fileprivate func buttonTapped(_ sender: UITapGestureRecognizer) {
-        print("Bana basıldı")
+        print("Tap Gesture recognized")
         isUserInteractionEnabled = false
         startTappedAnimation { finish in
             if finish {
-                print("CLICKED")
+                print("Animation Ended")
                 self.isUserInteractionEnabled = true
                 self.pressedButtonAction()
                 //MARK: - delegate method called

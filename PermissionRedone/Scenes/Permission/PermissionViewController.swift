@@ -20,6 +20,7 @@ class PermissionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addPermissionMainView()
+        subscribeViewModelListeners()
     }
     
     private func addPermissionMainView() {
@@ -34,8 +35,11 @@ class PermissionViewController: UIViewController {
             permissionMainView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             permissionMainView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
-        
         ])
     }
-    
+    private func subscribeViewModelListeners() {
+        viewModel.listenManagerActions { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }
+    }
 }

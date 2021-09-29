@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         print("cameraButtonPressed")
         self.present(PermissionViewBuilder.build(with: .camera), animated: true, completion: nil)
     }
+    
     lazy var photosButtonHandler: VoidCompletionBlock = {
         print("photosButtonPressed")
         self.present(PermissionViewBuilder.build(with: .photos), animated: true, completion: nil)

@@ -9,19 +9,33 @@ import Foundation
 
 class PermissionViewModel {
     
+    private var permissionViewDismissActionBlock: VoidCompletionBlock?
+    
     private let manager: PermissionManagerProtocol
     
     init(manager: PermissionManagerProtocol) {
         self.manager = manager
     }
     
+    func listenManagerActions(with completion: @escaping VoidCompletionBlock) {
+        permissionViewDismissActionBlock = completion
+    }
     
     func getPermissionMainViewData() -> PermissionMainViewData {
-        return manager.getPermissionMainViewData()
+        return manager.getPermissionMainViewData(with: negativeListener, with: positiveListener)
     }
+    
+    lazy var negativeListener: VoidCompletionBlock = { [weak self] in
+        print("notnow pressed in permissionVM")
+        self?.permissionViewDismissActionBlock?()
+    }
+    lazy var positiveListener: VoidCompletionBlock = { [weak self] in
+        print("ok pressed in permissionVM")
+        
+    }
+    
 }
 
-//
 //PermissionMainViewData(image: PermissionImages.camera.value,
 //                       labelPackData: LabelPackComponentData(
 //                        title: "Camera Permission",

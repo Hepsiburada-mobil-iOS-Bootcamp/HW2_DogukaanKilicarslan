@@ -41,6 +41,7 @@
 		D8E7EFBC270494BE008348B6 /* PermissionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFBB270494BE008348B6 /* PermissionViewFactory.swift */; };
 		D8E7EFBF27049AEF008348B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8E7EFC127049AEF008348B6 /* Localizable.strings */; };
 		D8E7EFC427049BBC008348B6 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFC327049BBC008348B6 /* String+Extensions.swift */; };
+		D8E7EFC727049CC2008348B6 /* PermissionLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFC627049CC2008348B6 /* PermissionLocalizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		D8E7EFC027049AEF008348B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D8E7EFC227049B0C008348B6 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D8E7EFC327049BBC008348B6 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D8E7EFC627049CC2008348B6 /* PermissionLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionLocalizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 		D8E7EF8227030623008348B6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D8E7EFC527049CB6008348B6 /* PermissionLocalizable */,
 				D8E7EFA727046E87008348B6 /* AssetHelpers */,
 				D8E7EF90270329EB008348B6 /* Extensions */,
 				D8E7EF8327030626008348B6 /* FontManager */,
@@ -359,6 +362,14 @@
 			path = PermissionViewFactory;
 			sourceTree = "<group>";
 		};
+		D8E7EFC527049CB6008348B6 /* PermissionLocalizable */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EFC627049CC2008348B6 /* PermissionLocalizable.swift */,
+			);
+			path = PermissionLocalizable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E7EFA127046335008348B6 /* PermissionMainViewData.swift in Sources */,
+				D8E7EFC727049CC2008348B6 /* PermissionLocalizable.swift in Sources */,
 				D8E7EF4D2701F6F9008348B6 /* ViewController.swift in Sources */,
 				D8E7EF8727030643008348B6 /* GenericValueProtocol.swift in Sources */,
 				D8E7EF9C27045FDF008348B6 /* LabelPackComponentData.swift in Sources */,

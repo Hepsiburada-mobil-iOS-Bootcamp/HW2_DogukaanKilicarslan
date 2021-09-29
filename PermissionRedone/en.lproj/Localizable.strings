@@ -11,7 +11,7 @@
 "cameraPermissionSubTitle" = "Would you please give permission to access your camera.";
 
 "photosPermissionTitle" = "Photos Permission";
-"photosPermissionSubTitle" = "Would you please give permission to access your photos.";
+"photosPermissionSubtitle" = "Would you please give permission to access your photos.";
 
-"permissionOk" = "OK";
+"permissionOK" = "OK";
 "permissionNotNow" = "Not Now";
