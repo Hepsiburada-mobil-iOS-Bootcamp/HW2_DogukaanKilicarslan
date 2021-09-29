@@ -14,16 +14,15 @@ class ViewController: UIViewController {
 
     private var cameraButton: ActionButton! //This button will be initialized by me later. trust me.
     private var photosButton: ActionButton!
-    
+    private var actionModule: ActionModule!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addActionButton()
-        
-        test(completion: testHandler)
-        
-        
+        addActionModule()
+        setupActionModuleData()
+//        test(completion: testHandler)
         
         
         //MARK: - delegate methods
@@ -49,7 +48,7 @@ class ViewController: UIViewController {
         view.addSubview(cameraButton)
         
         NSLayoutConstraint.activate([
-        
+            
             cameraButton.heightAnchor.constraint(equalToConstant: 40),
             cameraButton.widthAnchor.constraint(equalToConstant: 140),
             
@@ -72,6 +71,31 @@ class ViewController: UIViewController {
         
         ])
     }
+    
+    private func addActionModule() {
+        
+        actionModule = ActionModule()
+        actionModule.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(actionModule)
+        
+        NSLayoutConstraint.activate([
+            
+            actionModule.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            actionModule.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
+        ])
+    }
+    
+    private func setupActionModuleData() {
+        let negative = ActionButtonData(text: "Not Now", type: .outlined(.bright)).setActionButtonListener {
+            print("negative fired")
+        }
+        let positive = ActionButtonData(text: "OK", type: .filled(.smooth)).setActionButtonListener {
+            print("positive fired")
+        }
+        
+        actionModule.setData(by: ActionModuleData(negativeButtonData: negative, positiveButtonData: positive))
+    }
+    
     
     func test(completion: @escaping (Bool) -> Void) {
         print("test fired")

@@ -25,6 +25,12 @@
 		D8E7EF8D27031051008348B6 /* ActionButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF8C27031051008348B6 /* ActionButtonTheme.swift */; };
 		D8E7EF8F270317C4008348B6 /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF8E270317C4008348B6 /* GenericBaseView.swift */; };
 		D8E7EF9227034066008348B6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9127034066008348B6 /* UIView+Extensions.swift */; };
+		D8E7EF9527034F77008348B6 /* ActionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9427034F77008348B6 /* ActionModule.swift */; };
+		D8E7EF9727034F80008348B6 /* ActionModuleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9627034F80008348B6 /* ActionModuleData.swift */; };
+		D8E7EF9A27045FC8008348B6 /* LabelPackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9927045FC8008348B6 /* LabelPackComponent.swift */; };
+		D8E7EF9C27045FDF008348B6 /* LabelPackComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9B27045FDF008348B6 /* LabelPackComponentData.swift */; };
+		D8E7EF9F27046304008348B6 /* PermissionMainComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EF9E27046304008348B6 /* PermissionMainComponent.swift */; };
+		D8E7EFA127046335008348B6 /* PermissionMainComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFA027046335008348B6 /* PermissionMainComponentData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		D8E7EF8C27031051008348B6 /* ActionButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonTheme.swift; sourceTree = "<group>"; };
 		D8E7EF8E270317C4008348B6 /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
 		D8E7EF9127034066008348B6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D8E7EF9427034F77008348B6 /* ActionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModule.swift; sourceTree = "<group>"; };
+		D8E7EF9627034F80008348B6 /* ActionModuleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModuleData.swift; sourceTree = "<group>"; };
+		D8E7EF9927045FC8008348B6 /* LabelPackComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPackComponent.swift; sourceTree = "<group>"; };
+		D8E7EF9B27045FDF008348B6 /* LabelPackComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPackComponentData.swift; sourceTree = "<group>"; };
+		D8E7EF9E27046304008348B6 /* PermissionMainComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainComponent.swift; sourceTree = "<group>"; };
+		D8E7EFA027046335008348B6 /* PermissionMainComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainComponentData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,9 @@
 		D8E7EF7B27030044008348B6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D8E7EF9D270462F5008348B6 /* PermissionMainComponent */,
+				D8E7EF9827045FBA008348B6 /* LabelPackComponent */,
+				D8E7EF9327034F67008348B6 /* ActionModuleComponent */,
 				D8E7EF7C27030051008348B6 /* ActionButtonComponent */,
 			);
 			path = Components;
@@ -204,6 +219,33 @@
 				D8E7EF9127034066008348B6 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D8E7EF9327034F67008348B6 /* ActionModuleComponent */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EF9427034F77008348B6 /* ActionModule.swift */,
+				D8E7EF9627034F80008348B6 /* ActionModuleData.swift */,
+			);
+			path = ActionModuleComponent;
+			sourceTree = "<group>";
+		};
+		D8E7EF9827045FBA008348B6 /* LabelPackComponent */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EF9927045FC8008348B6 /* LabelPackComponent.swift */,
+				D8E7EF9B27045FDF008348B6 /* LabelPackComponentData.swift */,
+			);
+			path = LabelPackComponent;
+			sourceTree = "<group>";
+		};
+		D8E7EF9D270462F5008348B6 /* PermissionMainComponent */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7EF9E27046304008348B6 /* PermissionMainComponent.swift */,
+				D8E7EFA027046335008348B6 /* PermissionMainComponentData.swift */,
+			);
+			path = PermissionMainComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,15 +378,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E7EFA127046335008348B6 /* PermissionMainComponentData.swift in Sources */,
 				D8E7EF4D2701F6F9008348B6 /* ViewController.swift in Sources */,
 				D8E7EF8727030643008348B6 /* GenericValueProtocol.swift in Sources */,
+				D8E7EF9C27045FDF008348B6 /* LabelPackComponentData.swift in Sources */,
 				D8E7EF492701F6F9008348B6 /* AppDelegate.swift in Sources */,
+				D8E7EF9727034F80008348B6 /* ActionModuleData.swift in Sources */,
 				D8E7EF8D27031051008348B6 /* ActionButtonTheme.swift in Sources */,
+				D8E7EF9A27045FC8008348B6 /* LabelPackComponent.swift in Sources */,
 				D8E7EF8B27031035008348B6 /* ActionButtonType.swift in Sources */,
 				D8E7EF9227034066008348B6 /* UIView+Extensions.swift in Sources */,
 				D8E7EF8927030ADC008348B6 /* ActionButtonData.swift in Sources */,
 				D8E7EF8527030632008348B6 /* FontManager.swift in Sources */,
 				D8E7EF4B2701F6F9008348B6 /* SceneDelegate.swift in Sources */,
+				D8E7EF9527034F77008348B6 /* ActionModule.swift in Sources */,
+				D8E7EF9F27046304008348B6 /* PermissionMainComponent.swift in Sources */,
 				D8E7EF8127030435008348B6 /* BaseView.swift in Sources */,
 				D8E7EF532701F6F9008348B6 /* PermissionRedone.xcdatamodeld in Sources */,
 				D8E7EF7E27030066008348B6 /* ActionButton.swift in Sources */,
