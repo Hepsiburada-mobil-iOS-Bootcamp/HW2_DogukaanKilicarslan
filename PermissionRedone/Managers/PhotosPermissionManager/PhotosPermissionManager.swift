@@ -9,20 +9,21 @@ import Foundation
 
 class PhotosPermissionManager: PermissionManagerProtocol {
     
+    
+    
     func requestPermission(with completion: @escaping VoidCompletionBlock) {
         print("Request permission from the system")
     }
     
-    func getPermissionMainViewData() -> PermissionMainViewData {
+    func getPermissionMainViewData(with negativeListener: @escaping VoidCompletionBlock, with positiveListener: @escaping VoidCompletionBlock) -> PermissionMainViewData {
         return PermissionMainViewData(image: PermissionImages.photos.value,
                                       labelPackData: LabelPackComponentData(
-                                        title: "Photos Permission",
-                                        subtitle: "Would you please give permission to access to your photos"),
+                                        title: PermissionLocalizable.photosPermissionTitle.value,
+                                        subtitle: PermissionLocalizable.photosPermissionSubtitle.value),
                                       actionModuleData: ActionModuleData(
-                                        negativeButtonData: ActionButtonData(text: "NotNow",
-                                                                             type: .outlined(.bright)),
-                                        positiveButtonData: ActionButtonData(text: "OK",
-                                                                             type: .filled(.bright))))
+                                        negativeButtonData: ActionButtonData(text: PermissionLocalizable.permissionNotNow.value,
+                                                                             type: .outlined(.bright)).setActionButtonListener(by: negativeListener),
+                                        positiveButtonData: ActionButtonData(text: PermissionLocalizable.permissionOK.value,
+                                                                             type: .filled(.bright)).setActionButtonListener(by: positiveListener)))
     }
-    
 }

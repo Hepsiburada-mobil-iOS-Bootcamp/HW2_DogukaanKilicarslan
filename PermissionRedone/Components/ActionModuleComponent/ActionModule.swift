@@ -58,10 +58,10 @@ class ActionModule: GenericBaseView<ActionModuleData> {
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             
-            mainStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 40),
-            mainStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -60),
-            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            mainStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
+            mainStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10),
+            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
+            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
             
         ])
         
