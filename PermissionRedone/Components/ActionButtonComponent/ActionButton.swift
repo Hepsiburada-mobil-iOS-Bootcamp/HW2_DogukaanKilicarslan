@@ -7,6 +7,10 @@
 
 import UIKit
 
+//This class is all about UI. We create a shadow box, inside that a containerView, inside that a label etc....
+//And we put all these together and call it with a function inside other views or whereever we need.
+
+
 //MARK: - delegate protocol
 
 //protocol ActionButtonDelegate: AnyObject{
@@ -15,7 +19,7 @@ import UIKit
 
 class ActionButton: GenericBaseView<ActionButtonData> {
     
-    //MARK: - delegate var
+//MARK: - delegate var
 
 //    weak var delegate: ActionButtonDelegate?
     
@@ -127,6 +131,8 @@ class ActionButton: GenericBaseView<ActionButtonData> {
     
 }
 
+//Functionality to recognize the tap action when user taps the button.
+
 extension ActionButton: UIGestureRecognizerDelegate {
     func addTapGesture() {
         let tap = UITapGestureRecognizer(target: self, action: .buttonTappedSelector)
@@ -142,8 +148,9 @@ extension ActionButton: UIGestureRecognizerDelegate {
                 print("Animation Ended")
                 self.isUserInteractionEnabled = true
                 self.pressedButtonAction()
-                //MARK: - delegate method called
-
+                
+//MARK: - delegate method called
+                
 //                self.delegate?.actionButtonPressed()
             }
         }

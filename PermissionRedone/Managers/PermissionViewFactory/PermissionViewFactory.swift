@@ -7,7 +7,10 @@
 
 import Foundation
 
+/*
+When user taps a button we give back a manager according to which button pressed.
 
+ */
 class PermissionViewFactory {
     class func getManager(with type: PermissionType) -> PermissionManagerProtocol {
         switch type {

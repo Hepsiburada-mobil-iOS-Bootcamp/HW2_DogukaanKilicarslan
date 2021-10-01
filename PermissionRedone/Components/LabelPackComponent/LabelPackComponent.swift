@@ -7,6 +7,10 @@
 
 import UIKit
 
+//This class is all about UI. We create a stackView, inside that two text labels.
+//And we put all these together and call it with a function inside other views or whereever we need.
+
+
 class LabelPackComponent: GenericBaseView<LabelPackComponentData> {
     
     private lazy var mainStackView: UIStackView = {

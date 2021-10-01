@@ -7,6 +7,8 @@
 
 import UIKit
 
+//Inherits from UIView to omit init functions and add two more functions to call from children classes
+
 class BaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)

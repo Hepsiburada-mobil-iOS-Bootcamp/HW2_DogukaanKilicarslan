@@ -7,6 +7,9 @@
 
 import UIKit
 
+//Value protocol becomes UIColor here.
+//We also determine the color of the buttons we set in other views.
+
 enum ActionButtonTheme: GenericValueProtocol {
     
     typealias Value = UIColor

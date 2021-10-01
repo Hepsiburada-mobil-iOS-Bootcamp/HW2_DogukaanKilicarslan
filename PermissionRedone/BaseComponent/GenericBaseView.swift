@@ -12,7 +12,8 @@ class GenericBaseView<T>: BaseView {
     private var data: T?
     
     
-    //burayı baseview'dan zaten alıyoruz yazmak zorunda değiliz
+    //we already get this init from BaseView class. We dont need to write it here.
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -22,11 +23,13 @@ class GenericBaseView<T>: BaseView {
         self.data = data
         super.init(frame: frame)
         loadDataView()
-        
     }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
+    //calling these funcs from the child classes to pass data between files
     
     func loadDataView() {
         

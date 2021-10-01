@@ -11,8 +11,8 @@ typealias BooleanCompletionBlock = (Bool) -> Void
 
 class ViewController: UIViewController {
     
-
-    private var cameraButton: ActionButton! //This button will be initialized by me later. trust me.
+//two buttons created with late initializer with a function
+    private var cameraButton: ActionButton!
     private var photosButton: ActionButton!
     
     override func viewDidLoad() {
@@ -20,13 +20,14 @@ class ViewController: UIViewController {
         
         addActionButton()
         
-        //MARK: - delegate methods
+//MARK: - delegate methods
 //        cameraButton.delegate = self
 //        photosButton.delegate = self
         
-        
     }
     
+    
+    //these handlers handle what we need the buttons to do when we tap on them.
     lazy var cameraButtonHandler: VoidCompletionBlock = {
         print("cameraButtonPressed")
         self.present(PermissionViewBuilder.build(with: .camera), animated: true, completion: nil)
@@ -37,10 +38,7 @@ class ViewController: UIViewController {
         self.present(PermissionViewBuilder.build(with: .photos), animated: true, completion: nil)
     }
     
-    
-    
-    
-    
+    //adding the buttons and giving them parameters and data here.
     private func addActionButton() {
         cameraButton = ActionButton(frame: .zero, data: ActionButtonData(text: "Camera", type: .filled(.smooth)).setActionButtonListener(by: self.cameraButtonHandler))
         cameraButton.translatesAutoresizingMaskIntoConstraints = false

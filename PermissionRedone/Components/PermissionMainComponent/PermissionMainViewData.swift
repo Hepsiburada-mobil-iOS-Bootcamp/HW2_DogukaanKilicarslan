@@ -7,6 +7,9 @@
 
 import UIKit
 
+//We determine what we need inside a Permission module (Whole sheet view we need) (An image, two labels, two buttons and their functionalities inherited from base classes respectively)
+
+
 class PermissionMainViewData {
     
     private(set) var image: UIImage

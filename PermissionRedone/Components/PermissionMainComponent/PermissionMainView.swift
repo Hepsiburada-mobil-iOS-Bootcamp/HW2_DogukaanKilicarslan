@@ -7,6 +7,9 @@
 
 import UIKit
 
+//With this view we put together everything we created inside the components.
+
+//Inherits GenericBaseView so that we dont have to call init funcs etc over and over again.
 class PermissionMainView: GenericBaseView<PermissionMainViewData> {
     
     private lazy var containerView: UIView = {
@@ -26,13 +29,14 @@ class PermissionMainView: GenericBaseView<PermissionMainViewData> {
         temp.spacing = 10
         return temp
     }()
+    
     private lazy var permissionImage: UIImageView = {
         let temp = UIImageView()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.contentMode = .scaleAspectFill
         return temp
-        
     }()
+    
     private lazy var permissionInfoView: LabelPackComponent = {
         let temp = LabelPackComponent()
         temp.translatesAutoresizingMaskIntoConstraints = false

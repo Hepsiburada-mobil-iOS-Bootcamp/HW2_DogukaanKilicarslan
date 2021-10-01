@@ -7,6 +7,9 @@
 
 import Foundation
 
+//We determine what we need inside an LabelPack (Two text lines with different names to fill out later.)
+
+
 class LabelPackComponentData {
     private(set) var title: String
     private(set) var subtitle: String

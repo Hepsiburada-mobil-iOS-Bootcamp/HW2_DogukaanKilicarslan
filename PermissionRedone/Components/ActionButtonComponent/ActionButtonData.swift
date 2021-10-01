@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+//We set the variables we need to create a action button. We determine their types here and fill them out later as we need.
+
 typealias VoidCompletionBlock = () -> Void
 
 class ActionButtonData {
@@ -21,6 +23,8 @@ class ActionButtonData {
         self.buttonType = type
    
     }
+    
+    //what we want the button to do when we press on it. We determine the action later inside the views
     
     func setActionButtonListener(by value: VoidCompletionBlock?) -> Self {
         actionButtonListener = value

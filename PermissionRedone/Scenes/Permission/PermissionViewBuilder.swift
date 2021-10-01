@@ -10,6 +10,7 @@ import UIKit
 
 
 class PermissionViewBuilder {
+    
     class func build(with type: PermissionType) -> UIViewController {
         
         let manager = PermissionViewFactory.getManager(with: type)

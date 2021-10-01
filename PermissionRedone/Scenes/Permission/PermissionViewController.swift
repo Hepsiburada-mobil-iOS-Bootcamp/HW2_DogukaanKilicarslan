@@ -7,6 +7,11 @@
 
 import UIKit
 
+/*
+ This view will be created according to the data we recieve from the user interaction.
+ And after that viewModel gets the manager from correct file and fills out necessary places inside the view (Image, Labels, Button colors and themes.)
+ */
+
 class PermissionViewController: UIViewController {
 
     private var permissionMainView: PermissionMainView!

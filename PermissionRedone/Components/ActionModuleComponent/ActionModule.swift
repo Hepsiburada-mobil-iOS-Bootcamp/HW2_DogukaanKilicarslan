@@ -7,6 +7,9 @@
 
 import UIKit
 
+//This class is all about UI. We create a container, inside that a stackView, inside that two buttons etc....
+//And we put all these together and call it with a function inside other views or whereever we need.
+
 class ActionModule: GenericBaseView<ActionModuleData> {
    
     

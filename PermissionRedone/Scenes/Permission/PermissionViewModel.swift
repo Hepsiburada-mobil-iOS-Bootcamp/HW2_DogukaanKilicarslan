@@ -7,6 +7,12 @@
 
 import Foundation
 
+/*
+we create Permission view managers to build a permission view with the data we want.
+Every view has a different manager.
+we call that manager from the view or according to user interaction.
+*/
+
 class PermissionViewModel {
     
     private var permissionViewDismissActionBlock: VoidCompletionBlock?

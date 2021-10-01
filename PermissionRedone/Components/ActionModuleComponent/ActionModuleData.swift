@@ -7,6 +7,8 @@
 
 import UIKit
 
+//We determine what we need inside an ActionModule ( two buttons and their functionalities inherited from base actionButton)
+
 class ActionModuleData {
     
     private(set) var negativeButtonData: ActionButtonData
