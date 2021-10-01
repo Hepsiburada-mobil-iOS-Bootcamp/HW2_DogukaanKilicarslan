@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  PermissionRedone
+
+  Created by DarkBringer on 29.09.2021.
+  
+*/
+
+
+"cameraPermissionTitle" = "Camera Permission";
+"cameraPermissionSubTitle" = "Would you please give permission to access your camera.";
+
+"photosPermissionTitle" = "Photos Permission";
+"photosPermissionSubtitle" = "Would you please give permission to access your photos.";
+
+"permissionOK" = "OK";
+"permissionNotNow" = "Not Now";
