@@ -37,6 +37,9 @@ class PermissionViewModel {
     }
     lazy var positiveListener: VoidCompletionBlock = { [weak self] in
         print("ok pressed in permissionVM")
+        self?.manager.requestPermission(with: {
+            
+        })
         
     }
     

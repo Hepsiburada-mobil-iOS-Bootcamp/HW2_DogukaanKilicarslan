@@ -5,7 +5,9 @@
 //  Created by DarkBringer on 29.09.2021.
 //
 
-import Foundation
+import UIKit
+import PhotosUI
+import AVFoundation
 
 /*
  When user taps camera button this manager gets called to the permissionViewModel and shows the data we give here.
@@ -19,8 +21,17 @@ import Foundation
 class CameraPermissionManager: PermissionManagerProtocol {
     
     func requestPermission(with completion: @escaping VoidCompletionBlock) {
-        print("Request permission from the system")
+        //Camera
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+            if response {
+                //access granted
+            } else {
+
+            }
+        }
     }
+        
+        
 
     func getPermissionMainViewData(with negativeListener: @escaping VoidCompletionBlock, with positiveListener: @escaping VoidCompletionBlock) -> PermissionMainViewData {
         return PermissionMainViewData(image: PermissionImages.camera.value,

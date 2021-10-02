@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import PhotosUI
 /*
  When user taps photos button this manager gets called to the permissionViewModel and shows the data we give here.
  
@@ -17,9 +17,20 @@ import Foundation
  */
 
 class PhotosPermissionManager: PermissionManagerProtocol {
-    
+   
     func requestPermission(with completion: @escaping VoidCompletionBlock) {
         print("Request permission from the system")
+        //Photos
+                let photos = PHPhotoLibrary.authorizationStatus()
+                if photos == .notDetermined {
+                    PHPhotoLibrary.requestAuthorization({status in
+                        if status == .authorized{
+                            
+                        } else {
+                            
+                        }
+                    })
+                }
     }
     
     func getPermissionMainViewData(with negativeListener: @escaping VoidCompletionBlock, with positiveListener: @escaping VoidCompletionBlock) -> PermissionMainViewData {
